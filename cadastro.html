@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAVE</title>
+    <style>
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(-45deg, #424242, #530e94, #f3c3c3 ,#bbf098, #7ab36f, #5ff591, #f1872f, #5289ee, #7452ee);
+	background-size: 400% 400%;
+	animation: gradiente 15s ease infinite;
+}
+
+@keyframes gradiente {
+	  0% {
+		  background-position: 0% 50%;
+	  }
+	  50% {
+		  background-position: 100% 50%;
+	  }
+	  100% {
+		  background-position: 0% 50%;
+	  }
+} 
+
+.formulario {
+  max-width: 650px;
+  text-align: center;
+  margin: 20px auto;
+}
+.formulario input, form textarea {
+  border: 0;
+  outline: 0;
+  padding: 0.8em;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  font-family:'open_sansregular';
+  font-size:16px;
+  color:#424242;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+.formulario input:focus, .formulario textarea:focus {
+   
+  color:rgba(255, 255, 255, 0); 
+  -moz-box-shadow: 0 0px 2px #e7c83c !important;
+  -webkit-box-shadow: 0 0px 2px #e7c83c !important;
+  box-shadow: 0 0px 2px #e7c83c !important;
+}
+.formulario .btn-submit {
+  color: rgb(0, 0, 0);
+  background: #e7c83c ;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.formulario .btn-submit:hover {
+ 
+  background-color:#424242;
+  -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+.formulario textarea {
+  height: 174px;
+}
+.metade {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+.right { width:50%;}
+.left  { margin-right:2%; }
+@media (max-width: 768px) {
+  
+  .metade { width:100%; float:none; margin-bottom:0; }
+}
+
+</style>
+</head>
+<body>
+
+	<form class="formulario" method="post" action="#">
+          
+		<div class="metade left">
+	  
+		  <input type="text" placeholder="Nome" required="">
+		  <input type="email" placeholder="E-mail" required="">
+		  <input type="text" placeholder="Assunto" required="">
+	  
+		</div>
+	  
+		<div class="metade right">
+		  <textarea name="mensagem" type="text" placeholder="Mesagem" required=""></textarea>
+		</div>  
+	  
+		<input type="submit" value="Enviar Dados" class="btn-submit">
+	  
+	  </form>  
+  
+</body>
+</html>
